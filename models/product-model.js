@@ -5,12 +5,16 @@ const productSchema = mongoose.Schema({
     name: String,
     price: Number,
     discount: {
-        tupe: Number,
+        type: Number,
         default: 0,
     },
     bgcolor: String,
-    panecolor: String,
-    textcolor: String
+    panelcolor: String,
+    textcolor: String,
+    date: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 module.exports = mongoose.model("product", productSchema);
